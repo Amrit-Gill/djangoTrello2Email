@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    background-image: url("http://www.pixeden.com/media/k2/galleries/165/003-subtle-light-pattern-background-texture-vol5.jpg");
+}
+
+input[type=text], select {
+    width: 100%;
+    color: green;
+    padding: 12px 5px;
+    margin: 8px 0;
+    border-style: solid;
+    border-color: green;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 8px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    position: center;
+    width: 50%;
+    height: 50%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+   
+}
+</style>
+<body>
+
+<h2><center>Auto-Generate an email from your trello board</center></h2>
+<div>
+
+  <form action="" method="post">
+  	{% csrf_token %}
+    {{ form }}  
+    <input type="submit" value="Send">
+  </form>
+</div>
+</body>
+</html>
