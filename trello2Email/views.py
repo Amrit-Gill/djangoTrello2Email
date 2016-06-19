@@ -1,10 +1,13 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from .forms import NameForm
+from django.template import Context, loader
 from trello2Email.trelloApi.trello2Email import trello2Email
 
+
 def thanks(request):
-    return HttpResponse("Successful")
+    template = loader.get_template("successful.html")
+    return HttpResponse(template.render())
 
 def get_name(request):
     # if this is a POST request we need to process the form data
